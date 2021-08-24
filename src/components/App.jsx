@@ -1,29 +1,3 @@
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
-
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -50,10 +24,10 @@ export default function BasicExample() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/about">Films</Link>
           </li>
           <li>
-            <Link to="/dashboard">Dashboard</Link>
+            <Link to="/Tvchannels">Tvchannels</Link>
           </li>
         </ul>
 
@@ -70,11 +44,11 @@ export default function BasicExample() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/about">
-            <About />
+          <Route path="/films">
+            <Films />
           </Route>
-          <Route path="/dashboard">
-            <Dashboard />
+          <Route path="/tvchannels">
+            <Tvchannels />
           </Route>
         </Switch>
       </div>
