@@ -16,12 +16,12 @@
     <header class="header">
         <div class="container">
             <div class="header-wrapper">
-                <div class="header-logo">
+                <a class="header-logo" href="/">
                     <img class="header-logo__icon" src="img/logo.svg" alt="Видеосервис">
                     <span class="header-logo__text">Видеосервис</span>
-                </div>
+                </a>
                 <div class="header-search">
-                    <input type="text" class="header-search__text" placeholder="Поиск...">
+                    <input class="header-search__input" type="text" placeholder="Поиск...">
                     <button class="header-search__btn" type="button">Найти</button>
                 </div>
                 <div class="header-login">
@@ -31,12 +31,11 @@
         </div>
     </header>
 
-
     <section class="films-header">
         <div class="container">
             <div class="films-header__wrapper">
-                <div class="films-header__item-active">Фильмы</div>
-                <div class="films-header__item">Телеканалы</div>
+                <a href="#" class="films-header__item films-header__item--active">Фильмы</a>
+                <a href="#" class="films-header__item">Телеканалы</a>
             </div>
         </div>
     </section>
@@ -44,71 +43,96 @@
 
     <section class="films-latest">
         <div class="container">
-            <div class="films-lates__wrapper">
+            <div class="films-latest__wrapper">
                 <div class="films-latest__title">
                     <h1 class="films-latest__title-text">🔥 Новинки</h1>
-                    </img>
-                    <div class="films-latest__wrapper">
-                        <div class="films-latest__card">
-                            <img class="films-latest__card-img" src="../ui/img/card-img-1.jpg" alt="">
-                            <span class="films-latest__card-text">Мульт в кино. Выпуск №103. Некогда грустить!</span>
+                </div>
+                <div class="films-latest__items">
+                    <a class="films-latest__card" href="#">
+                        <div class="films-latest__card-wrapper">
+                            <img class="films-latest__card-img" src="../ui/img/card-img-1.jpg" alt="film-1">
+                            <span class="films-latest__hover-text">Фильм повествует о череде событий, произошедших в
+                                Голливуде в 1969 году, на закате его «золотого века». Известный актер Рик Далтон и его
+                                дублер Клифф Бут пытаются найти свое место в стремительно меняющемся мире
+                                киноиндустрии.</span>
                         </div>
-                        <div class="films-latest__card">
-                            <img class="films-latest__card-img" src="../ui/img/card-img-2.jpg" alt="">
-                            <span class="films-latest__card-text">Новый Бэтмен</span>
+                        <span class="films-latest__card-text">Мульт в кино. Выпуск №103. Некогда грустить!</span>
+                    </a>
+                    <a class="films-latest__card" href="#">
+                        <div class="films-latest__card-wrapper">
+                            <img class="films-latest__card-img" src="../ui/img/card-img-2.jpg" alt="film-1">
+                            <span class="films-latest__hover-text">Фильм повествует о череде событий, произошедших в
+                                Голливуде в 1969 году, на закате его «золотого века». Известный актер Рик Далтон и его
+                                дублер Клифф Бут пытаются найти свое место в стремительно меняющемся мире
+                                киноиндустрии.</span>
                         </div>
-                        <div class="films-latest__card">
-                            <img class="films-latest__card-img" src="../ui/img/card-img-3.jpg" alt="">
-                            <span class="films-latest__card-text">Однажды... в Голливуде</span>
+                        <span class="films-latest__card-text">Новый Бэтмен</span>
+                    </a> <a class="films-latest__card" href="#">
+                        <div class="films-latest__card-wrapper">
+                            <img class="films-latest__card-img" src="../ui/img/card-img-3.jpg" alt="film-1">
+                            <span class="films-latest__hover-text">Фильм повествует о череде событий, произошедших в
+                                Голливуде в 1969 году, на закате его «золотого века». Известный актер Рик Далтон и его
+                                дублер Клифф Бут пытаются найти свое место в стремительно меняющемся мире
+                                киноиндустрии.</span>
                         </div>
-                        <div class="films-latest__card">
-                            <img class="films-latest__card-img" src="../ui/img/card-img-4.jpg" alt="">
-                            <span class="films-latest__card-text">Стриптизёрши</span>
+                        <span class="films-latest__card-text">Однажды... в Голливуде</span>
+                    </a> <a class="films-latest__card" href="#">
+                        <div class="films-latest__card-wrapper">
+                            <img class="films-latest__card-img" src="../ui/img/card-img-4.jpg" alt="film-1">
+                            <span class="films-latest__hover-text">Фильм повествует о череде событий, произошедших в
+                                Голливуде в 1969 году, на закате его «золотого века». Известный актер Рик Далтон и его
+                                дублер Клифф Бут пытаются найти свое место в стремительно меняющемся мире
+                                киноиндустрии.</span>
                         </div>
-                    </div>
+                        <span class="films-latest__card-text">Стриптизёрши</span>
+                    </a>
                 </div>
             </div>
     </section>
+
 
 
     <section class="films-genres">
         <div class="container">
             <div class="films-genres__wrapper">
                 <h2 class="films-genres__title">Жанры</h2>
-                <div class="films-genres__wrapper">
-                    <div class="films-genres__card films-genres__card--yellow">
-                        <span class="films-genres__card-icon">😁</span>
+                <div class="films-genres__items">
+                    <a class="films-genres__card films-genres__card--yellow" href="#">
+                        <img class="films-genres__card-icon" src="img/icons/😁.svg">
                         <span class="films-genres__card-text">Комедии</span>
-                    </div>
-                    <div class="films-genres__card films-genres__card--orange">
-                        <span class="films-genres__card-icon">😭</span>
+                    </a>
+                    <a class="films-genres__card films-genres__card--orange" href="#">
+                        <img class="films-genres__card-icon" src="img/icons/😭.svg">
                         <span class="films-genres__card-text">Драмы</span>
-                    </div>
-                    <div class="films-genres__card films-genres__card--blue">
-                        <span class="films-genres__card-icon">👽</span>
+                    </a>
+                    <a class="films-genres__card films-genres__card--blue" href="#">
+                        <img class="films-genres__card-icon" src="img/icons/👽.svg">
                         <span class="films-genres__card-text">Фантастика</span>
-                    </div>
-                    <div class="films-genres__card films-genres__card--black">
-                        <span class="films-genres__card-icon">👻</span>
+                    </a>
+                    <a class="films-genres__card films-genres__card--black" href="#">
+                        <img class="films-genres__card-icon" src="img/icons/👻.svg">
                         <span class="films-genres__card-text">Ужасы</span>
-                    </div>
+                    </a>
                 </div>
             </div>
 
         </div>
     </section>
 
+
     <footer class="footer">
         <div class="container">
             <div class="footer-wrapper">
-                <div class="footer-logo"></div>
+                <img class="footer-logo" src="../footer-logo.svg">
                 <div class="footer-info">
                     <p class="footer-info__address">426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса,
                         246
                         (ДК
                         «Металлург»)</p>
-                    <p class="footer-info__phone"><a href="tel:+73412938861">+7 (3412) 93-88-61</a>, <a
-                            href="tel:+3412432929">43-29-29</a></p>
+                    <div class="footer-info__phone">
+                        <a class="footer-info__phone-link" href="tel:+73412938861">+7 (3412) 93-88-61</a>,
+                        <a class="footer-info__phone-link" href="tel:+3412432929">43-29-29</a>
+                    </div>
                     <a class="footer-info__link" href="htc-cs.ru">htc-cs.ru</a>
                 </div>
             </div>
