@@ -1,8 +1,8 @@
-/* Указываем box sizing */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
+    font-family: Rubik;
 }
 
 
@@ -33,7 +33,46 @@ select {
     font: inherit;
 }
 
+button,
+button:active,
+button:focus {
+    outline: none;
+}
+
 
 .container {
-    
+    max-width: 1440px;
+    padding: 0 130px;
+    margin: 0 auto;
+}
+
+
+.header {}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-logo {}
+
+.header-logo__icon {}
+
+.header-logo__text {}
+
+.header-search {}
+
+.header-search__text {}
+
+.header-search__btn {}
+
+.header-login {}
+
+.header-login__btn {
+    padding: 10px 32px;
+    background: #E5261E;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
 }
