@@ -120,6 +120,31 @@ button:focus {
     background: #CC221B;
 }
 
+.header-login__user {
+    display: flex;
+}
+
+.header-login__user-name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #333333;
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+.header-login__user-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #E5261E;
+    cursor: pointer;
+}
+
+
 @media screen and (max-width: 768px) {
     .header-search__input {
         min-width: 130px;
@@ -555,7 +580,7 @@ button:focus {
     top: 0;
     z-index: 2;
     cursor: pointer;
-    opacity: 1;
+    opacity: 0;
     transition: opacity 0.25s linear;
 }
 
@@ -574,4 +599,118 @@ button:focus {
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select: none;
+}
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 20;
+
+}
+
+.modal.modal--show {
+    display: flex;
+}
+
+.modal__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 36px;
+    z-index: 21;
+    background: #FFFFFF;
+    border-radius: 8px;
+}
+
+.modal__title {}
+
+.modal__inputs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+}
+
+.modal__login {
+    border: none;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #333333;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #828282;
+}
+
+.modal__login::placeholder {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #828282;
+}
+
+.modal__pass {
+    margin-top: 24px;
+    border: none;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #333333;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #828282;
+}
+
+.modal__pass::placeholder {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #828282;
+}
+
+.modal__member-label {}
+
+.modal__member-checkbox {
+    margin-top: 24px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #333333;
+}
+
+.modal-login__btn {
+    margin-top: 111px;
+    padding: 10px 32px;
+    background: #E5261E;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-login__btn:hover {
+    background: #CC221B;
+}
+
+.modal__shadow {
+    position: fixed;
+    border: none;
+    display: block;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 10;
+    background: #333333;
+    opacity: 0.6;
 }
