@@ -167,3 +167,33 @@
 
 let el = document.querySelector('.channels-wrapper');
 SimpleScrollbar.initEl(el);
+
+
+let modalSection = document.querySelector(".modal");
+let loginBtn = document.querySelector(".header-login__btn");
+let modalOverlay = document.querySelector(".modal__shadow");
+let body = document.querySelector("body");
+
+function toggleClass(element, classname) {
+    element.classList.toggle(classname)
+}
+
+if (modalSection) {
+    loginBtn.addEventListener('click', () => {
+        toggleClass(modalSection, 'modal--show')
+        toggleClass(body, 'scroll--hidden')
+    })
+}
+
+if (modalOverlay) {
+    modalOverlay.addEventListener('click', () => {
+        toggleClass(modalSection, 'modal--show')
+        toggleClass(body, 'scroll--hidden')
+    })
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            toggleClass(modalSection, 'modal--show')
+            toggleClass(body, 'scroll--hidden')
+        }
+    })
+}

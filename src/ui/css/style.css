@@ -45,6 +45,10 @@ button:focus {
     margin: 0 auto;
 }
 
+.scroll--hidden {
+    overflow: hidden
+}
+
 /* HEADER SECTION */
 
 
@@ -709,7 +713,6 @@ button:focus {
     right: 0;
     left: 0;
     overflow: hidden;
-    pointer-events: none;
     z-index: 10;
     background: #333333;
     opacity: 0.6;
