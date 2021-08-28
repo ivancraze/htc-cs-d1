@@ -175,25 +175,25 @@ let modalOverlay = document.querySelector(".modal__shadow");
 let body = document.querySelector("body");
 
 function toggleClass(element, classname) {
-    element.classList.toggle(classname)
+    element.classList.toggle(classname);
 }
 
 if (modalSection) {
     loginBtn.addEventListener('click', () => {
-        toggleClass(modalSection, 'modal--show')
-        toggleClass(body, 'scroll--hidden')
-    })
+        toggleClass(modalSection, 'modal--show');
+        toggleClass(body, 'scroll--hidden');
+    });
 }
 
 if (modalOverlay) {
     modalOverlay.addEventListener('click', () => {
-        toggleClass(modalSection, 'modal--show')
-        toggleClass(body, 'scroll--hidden')
-    })
+        toggleClass(modalSection, 'modal--show');
+        toggleClass(body, 'scroll--hidden');
+    });
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
-            toggleClass(modalSection, 'modal--show')
-            toggleClass(body, 'scroll--hidden')
+            toggleClass(modalSection, 'modal--show');
+            toggleClass(body, 'scroll--hidden');
         }
-    })
+    });
 }

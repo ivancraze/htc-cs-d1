@@ -1,0 +1,46 @@
+.footer {
+    margin-top: 72px;
+    background: #F2F2F2;
+}
+
+.footer-wrapper {
+    display: flex;
+    padding: 25px 0;
+}
+
+.footer-logo {
+    margin-right: 40px;
+}
+
+
+.footer-info__address {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #333333;
+}
+
+.footer-info__phone {
+    margin-top: 6px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #333333;
+}
+
+.footer-info__phone-link {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #333333;
+}
+
+.footer-info__link {
+    display: block;
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #1F4766;
+}
