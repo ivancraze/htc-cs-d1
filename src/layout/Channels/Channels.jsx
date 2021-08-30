@@ -8,7 +8,7 @@ const Channels = () => {
                     <div class="channels-wrapper ss-container">
                         <div class="channels-card">
                             <div class="channels-card__logo">
-                                <img class="channels-card__logo-img" src="../ui/img/channels/first.svg" alt="logo" />
+                                <img class="channels-card__logo-img" src="/assets/img/channels/first.svg" alt="logo" />
                             </div>
                             <div class="channels-card__schedule">
                                 <div class="channels-card__schedule-title">Первый канал</div>
@@ -30,7 +30,7 @@ const Channels = () => {
 
                         <div class="channels-card">
                             <div class="channels-card__logo">
-                                <img class="channels-card__logo-img" src="../ui/img/channels/2x2.svg" alt="logo" />
+                                <img class="channels-card__logo-img" src="/assets/img/channels/2x2.svg" alt="logo" />
                             </div>
                             <div class="channels-card__schedule">
                                 <div class="channels-card__schedule-title">2x2</div>
@@ -51,7 +51,7 @@ const Channels = () => {
 
                         <div class="channels-card">
                             <div class="channels-card__logo">
-                                <img class="channels-card__logo-img" src="../ui/img/channels/rbc.svg" alt="logo" />
+                                <img class="channels-card__logo-img" src="/assets/img/channels/rbc.svg" alt="logo" />
                             </div>
                             <div class="channels-card__schedule">
                                 <div class="channels-card__schedule-title">РБК</div>
@@ -73,7 +73,7 @@ const Channels = () => {
 
                         <div class="channels-card">
                             <div class="channels-card__logo">
-                                <img class="channels-card__logo-img" src="../ui/img/channels/amedia.svg" alt="logo" />
+                                <img class="channels-card__logo-img" src="/assets/img/channels/amedia.svg" alt="logo" />
                             </div>
                             <div class="channels-card__schedule">
                                 <div class="channels-card__schedule-title">AMEDIA PREMIUM</div>

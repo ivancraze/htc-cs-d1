@@ -1,22 +1,31 @@
 import React from 'react';
 
-const Modal = () => {
+const Modal = ({visible, setVisible}) => {
+
+
+    const rootClasses = ['modal']
+
+    if (visible) {
+        rootClasses.push('modal--show');
+    }
+
+
     return (
         <>
-            <section class="modal">
-                <form class="modal__form" action="/">
-                    <h2 class="modal__title">Вход</h2>
-                    <div class="modal__inputs">
-                        <input class="modal__login" type="text" placeholder="Логин" required />
-                        <input class="modal__pass" type="text" placeholder="Пароль" required />
-                        <label class="modal__member-label" for="checkbox-member" >
-                            <input class="modal__member-checkbox" type="checkbox" name="Запомнить" id="checkbox-member" />
+            <section className={rootClasses.join(' ')}>
+                <form className="modal__form" action="/">
+                    <h2 className="modal__title">Вход</h2>
+                    <div className="modal__inputs">
+                        <input className="modal__login" type="text" placeholder="Логин" required />
+                        <input className="modal__pass" type="text" placeholder="Пароль" required />
+                        <label className="modal__member-label" for="checkbox-member" >
+                            <input className="modal__member-checkbox" type="checkbox" name="Запомнить" id="checkbox-member" />
                             Запомнить
                         </label>
                     </div>
-                    <button class="modal-login__btn" type="button">Войти</button>
+                    <button className="modal-login__btn" type="button">Войти</button>
                 </form>
-                <div class="modal__shadow"></div>
+                <div className="modal__shadow" onClick={() => setVisible(false)}></div>
             </section>
         </>
     );

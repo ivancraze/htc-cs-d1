@@ -4,10 +4,10 @@ import FilmsGenres from '../layout/FilmsGenres/FilmsGenres';
 
 const index = () => {
     return (
-        <main className="content">
+        <>
             <FilmsLatest />
             <FilmsGenres />
-        </main>
+        </>
     );
 };
 

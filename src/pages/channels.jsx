@@ -3,9 +3,7 @@ import Channels from '../layout/Channels/Channels';
 
 const channels = () => {
     return (
-        <main className="content">
-            <Channels />
-        </main>
+        <Channels />
     );
 };
 

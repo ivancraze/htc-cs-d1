@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Button = ({ children, ...props }) => {
+const Button = ({ children, className, ...props }) => {
     return (
         <>
-            <button {...props} class="header-search__btn" type="button">{children}</button>
+            <button className={className} {...props} type="button">{children}</button>
         </>
     );
 };
