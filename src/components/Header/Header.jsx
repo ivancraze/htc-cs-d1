@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import Button from '../../components/Button/Button';
-import Modal from '../../components/Modal/Modal';
+import Button from '../UI/Button/Button';
+import Modal from '../UI/Modal/Modal';
 
 
 function Header({ ...props }) {

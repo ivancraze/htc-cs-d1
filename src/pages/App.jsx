@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import Header from '../layout/Header/Header';
-import FilmsHeader from '../layout/FilmsHeader/FilmsHeader';
-import Footer from '../layout/Footer/Footer';
+import React from "react";
+import Header from '../components/Header/Header';
+import FilmsHeader from '../components/FilmsHeader/FilmsHeader';
+import Footer from '../components/Footer/Footer';
 
 
 export default function App() {

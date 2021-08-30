@@ -1,5 +1,5 @@
 import React from 'react';
-import Channels from '../layout/Channels/Channels';
+import Channels from '../components/Channels/Channels';
 
 const channels = () => {
     return (

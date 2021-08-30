@@ -1,5 +1,5 @@
 import React from 'react';
-import FilmsLatestCard from '../../components/FilmsLatestCard/FilmsLatestCard';
+import FilmsLatestCard from '../FilmsLatestCard/FilmsLatestCard';
 
 const FilmsLatest = () => {
     return (

@@ -1,6 +1,6 @@
 import React from 'react';
-import FilmsLatest from '../layout/FilmsLatest/FilmsLatest';
-import FilmsGenres from '../layout/FilmsGenres/FilmsGenres';
+import FilmsLatest from '../components/FilmsHeader/FilmsHeader';
+import FilmsGenres from '../components/FilmsGenres/FilmsGenres';
 
 const index = () => {
     return (
