@@ -1,5 +1,12 @@
 import React from 'react';
 
+const genres = [
+    { name: 'Комедии', iconPath: '/assets/img/icons/😁.svg', gradient: 'yellow', },
+    { name: 'Драмы', iconPath: '/assets/img/icons/😭.svg', gradient: 'orange', },
+    { name: 'Фантастика', iconPath: '/assets/img/icons/👽.svg', gradient: 'blue', },
+    { name: 'Ужасы', iconPath: '/assets/img/icons/👻.svg', gradient: 'black', },
+]
+
 const FilmsGenres = () => {
     return (
         <>
@@ -8,25 +15,16 @@ const FilmsGenres = () => {
                     <div className="films-genres__wrapper">
                         <h2 className="films-genres__title">Жанры</h2>
                         <div className="films-genres__items">
-                            <a className="films-genres__card films-genres__card--yellow" href="#">
-                                <img className="films-genres__card-icon" src="/assets/img/icons/😁.svg" alt="icon" />
-                                <span className="films-genres__card-text">Комедии</span>
-                            </a>
-                            <a className="films-genres__card films-genres__card--orange" href="#">
-                                <img className="films-genres__card-icon" src="/assets/img/icons/😭.svg" alt="icon" />
-                                <span className="films-genres__card-text">Драмы</span>
-                            </a>
-                            <a className="films-genres__card films-genres__card--blue" href="#">
-                                <img className="films-genres__card-icon" src="/assets/img/icons/👽.svg" alt="icon" />
-                                <span className="films-genres__card-text">Фантастика</span>
-                            </a>
-                            <a className="films-genres__card films-genres__card--black" href="#">
-                                <img className="films-genres__card-icon" src="/assets/img/icons/👻.svg" alt="icon" />
-                                <span className="films-genres__card-text">Ужасы</span>
-                            </a>
+                            {
+                                genres.map(genre =>
+                                    <a className={`films-genres__card films-genres__card--${genre.gradient}`} href="#">
+                                        <img className="films-genres__card-icon" src={genre.iconPath} alt="icon" />
+                                        <span className="films-genres__card-text">{genre.name}</span>
+                                    </a>
+                                )
+                            }
                         </div>
                     </div>
-
                 </div>
             </section>
         </>

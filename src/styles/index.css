@@ -2,7 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: Rubik;
+  font-family: Rubik, Helvetica, Arial, sans-serif;
 }
 
 

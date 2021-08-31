@@ -3,7 +3,9 @@ import Channels from '../components/Channels/Channels';
 
 const channels = () => {
     return (
-        <Channels />
+        <>
+            <Channels />
+        </>
     );
 };
 

@@ -6,7 +6,7 @@ import Error from '../../pages/error';
 
 
 
-const FilmsHeader = () => {
+const Navbar = () => {
     return (
         <>
             <BrowserRouter >
@@ -41,4 +41,4 @@ const FilmsHeader = () => {
     );
 };
 
-export default FilmsHeader;
+export default Navbar;
