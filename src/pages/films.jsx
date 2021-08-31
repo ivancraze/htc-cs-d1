@@ -2,7 +2,7 @@ import React from 'react';
 import FilmsLatest from '../components/FilmsLatest/FilmsLatest';
 import FilmsGenres from '../components/FilmsGenres/FilmsGenres';
 
-const index = () => {
+const Films = () => {
     return (
         <>
             <FilmsLatest />
@@ -11,4 +11,4 @@ const index = () => {
     );
 };
 
-export default index;
+export default Films;

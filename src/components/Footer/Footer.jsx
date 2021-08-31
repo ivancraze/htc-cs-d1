@@ -13,7 +13,7 @@ const Footer = () => {
                                 <a className="footer-info__phone-link" href="tel:+73412938861">+7 (3412) 93-88-61</a>,
                                 <a className="footer-info__phone-link" href="tel:+3412432929">43-29-29</a>
                             </div>
-                            <a className="footer-info__link" href="htc-cs.ru">htc-cs.ru</a>
+                            <a className="footer-info__link" href="https://htc-cs.ru/">htc-cs.ru</a>
                         </div>
                     </div>
                 </div>

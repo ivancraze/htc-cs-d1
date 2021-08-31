@@ -731,3 +731,18 @@ button:focus {
   background: #333333;
   opacity: 0.6;
 }
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.error-title {
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.error-link {
+  margin-top: 40px;
+}
