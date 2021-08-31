@@ -18,7 +18,7 @@ const Modal = ({visible, setVisible}) => {
                     <div className="modal__inputs">
                         <input className="modal__login" type="text" placeholder="Логин" required />
                         <input className="modal__pass" type="text" placeholder="Пароль" required />
-                        <label className="modal__member-label" for="checkbox-member" >
+                        <label className="modal__member-label" htmlFor="checkbox-member" >
                             <input className="modal__member-checkbox" type="checkbox" name="Запомнить" id="checkbox-member" />
                             Запомнить
                         </label>

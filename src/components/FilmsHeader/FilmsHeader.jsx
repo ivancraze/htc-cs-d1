@@ -8,9 +8,9 @@ const FilmsHeader = () => {
     return (
         <>
             <BrowserRouter >
-                <nav class="films-header">
-                    <div class="container">
-                        <div class="films-header__wrapper">
+                <nav className="films-header">
+                    <div className="container">
+                        <div className="films-header__wrapper">
                             <NavLink activeClassName="films-header__item--active" className="films-header__item" exact to="/">Фильмы</NavLink>
                             <NavLink activeClassName="films-header__item--active" className="films-header__item" exact to="/channels">Телеканалы</NavLink>
                         </div>
