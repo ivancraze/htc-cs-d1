@@ -656,7 +656,7 @@ button:focus {
   margin-top: 24px;
 }
 
-.modal__login {
+.modal__input {
   border: none;
   padding-bottom: 3px;
   border-bottom: 1px solid #333333;
@@ -666,32 +666,21 @@ button:focus {
   color: #828282;
 }
 
-.modal__login::placeholder {
+.modal__input::placeholder {
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
   color: #828282;
+}
+
+.modal__input:focus {
+  outline: none;
 }
 
 .modal__pass {
   margin-top: 24px;
-  border: none;
-  padding-bottom: 3px;
-  border-bottom: 1px solid #333333;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 19px;
-  color: #828282;
 }
 
-.modal__pass::placeholder {
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 19px;
-  color: #828282;
-}
-
-.modal__member-label {}
 
 .modal__member-checkbox {
   margin-top: 24px;

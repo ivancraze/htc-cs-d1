@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { AuthContext } from "../../../context";
 
 const Modal = ({ visible, setVisible }) => {
@@ -7,9 +7,12 @@ const Modal = ({ visible, setVisible }) => {
         rootClasses.push('modal--show');
     }
 
-    const { isAuth, setIsAuth } = useContext(AuthContext);
     const [username, setUsername] = useState('');
 
+
+
+
+    const { isAuth, setIsAuth } = useContext(AuthContext);
     const login = event => {
         event.preventDefault();
         setIsAuth(true);
@@ -25,8 +28,8 @@ const Modal = ({ visible, setVisible }) => {
                 <form className="modal__form" onSubmit={login}>
                     <h2 className="modal__title">Вход</h2>
                     <div className="modal__inputs">
-                        <input className="modal__login" value={username} onChange={(e) => setUsername(e.target.value)} type="text" placeholder="Логин" required />
-                        <input className="modal__pass" type="password" placeholder="Пароль" required />
+                        <input className="modal__login modal__input" value={username} onChange={(e) => setUsername(e.target.value)} type="text" placeholder="Логин" required />
+                        <input className="modal__pass modal__input" type="password" placeholder="Пароль" required />
                         <label className="modal__member-label" htmlFor="checkbox-member" >
                             <input className="modal__member-checkbox" type="checkbox" name="Запомнить" id="checkbox-member" />
                             Запомнить
