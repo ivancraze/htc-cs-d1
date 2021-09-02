@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect, useCallback } from 'react';
 import { AuthContext } from "../../../context";
 
 const Modal = ({ visible, setVisible }) => {
@@ -8,11 +8,8 @@ const Modal = ({ visible, setVisible }) => {
     }
 
     const [username, setUsername] = useState('');
-
-
-
-
     const { setIsAuth } = useContext(AuthContext);
+
     const login = event => {
         event.preventDefault();
         setIsAuth(true);
@@ -21,25 +18,36 @@ const Modal = ({ visible, setVisible }) => {
         setVisible(false);
     }
 
+    const escFunction = useCallback((event) => {
+        if (event.keyCode === 27) {
+            setVisible(false)
+        }
+    }, [setVisible]);
+
+    useEffect(() => {
+        document.addEventListener("keydown", escFunction, false);
+
+        return () => {
+            document.removeEventListener("keydown", escFunction, false);
+        };
+    }, [escFunction]);
 
     return (
-        <>
-            <section className={rootClasses.join(' ')}>
-                <form className="modal__form" onSubmit={login}>
-                    <h2 className="modal__title">Вход</h2>
-                    <div className="modal__inputs">
-                        <input className="modal__login modal__input" value={username} onChange={(e) => setUsername(e.target.value)} type="text" placeholder="Логин" required />
-                        <input className="modal__pass modal__input" type="password" placeholder="Пароль" required />
-                        <label className="modal__member-label" htmlFor="checkbox-member" >
-                            <input className="modal__member-checkbox" type="checkbox" name="Запомнить" id="checkbox-member" />
-                            Запомнить
-                        </label>
-                    </div>
-                    <button className="modal-login__btn" type="submit">Войти</button>
-                </form>
-                <div className="modal__shadow" onClick={() => setVisible(false)}></div>
-            </section>
-        </>
+        <section className={rootClasses.join(' ')}>
+            <form className="modal__form" onSubmit={login}>
+                <h2 className="modal__title">Вход</h2>
+                <div className="modal__inputs">
+                    <input className="modal__login modal__input" value={username} onChange={(e) => setUsername(e.target.value)} type="text" placeholder="Логин" required />
+                    <input className="modal__pass modal__input" type="password" placeholder="Пароль" required />
+                    <label className="modal__member-label" htmlFor="checkbox-member" >
+                        <input className="modal__member-checkbox" type="checkbox" name="Запомнить" id="checkbox-member" />
+                        Запомнить
+                    </label>
+                </div>
+                <button className="modal-login__btn" type="submit">Войти</button>
+            </form>
+            <div className="modal__shadow" onClick={() => setVisible(false)}></div>
+        </section>
     );
 };
 

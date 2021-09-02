@@ -3,6 +3,7 @@
 
     &-wrapper {
         max-height: 696px;
+        overflow-y:scroll;
     }
 
     &-card {
@@ -57,6 +58,10 @@
 
         &__schedule {
             width: 100%;
+
+            &-title {
+                padding-left: 56px;
+            }
         }
 
         &__logo {
@@ -67,10 +72,6 @@
             &-img {
                 width: 25px;
                 height: 25px;
-            }
-
-            &-title {
-                padding-left: 56px;
             }
         }
     }

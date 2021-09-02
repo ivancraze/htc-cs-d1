@@ -38,24 +38,22 @@ const filmsInfo = [
 
 const FilmsLatest = () => {
     return (
-        <>
-            <section className="films-latest">
-                <div className="container">
-                    <div className="films-latest__wrapper">
-                        <div className="films-latest__title">
-                            <h2 className="films-latest__title-text">🔥 Новинки</h2>
-                        </div>
-                        <div className="films-latest__items">
-                            {
-                                filmsInfo.map(film =>
-                                    <FilmsLatestCard key={film.id} title={film.title} link={film.link} alt={film.alt} text={film.text} imgPath={film.imgPath} />
-                                )
-                            }
-                        </div>
+        <section className="films-latest">
+            <div className="container">
+                <div className="films-latest__wrapper">
+                    <div className="films-latest__title">
+                        <h2 className="films-latest__title-text">🔥 Новинки</h2>
+                    </div>
+                    <div className="films-latest__items">
+                        {
+                            filmsInfo.map(film =>
+                                <FilmsLatestCard key={film.id} title={film.title} link={film.link} alt={film.alt} text={film.text} imgPath={film.imgPath} />
+                            )
+                        }
                     </div>
                 </div>
-            </section>
-        </>
+            </div>
+        </section>
     );
 };
 
