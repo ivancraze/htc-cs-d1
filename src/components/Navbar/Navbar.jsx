@@ -29,12 +29,12 @@ const Navbar = () => {
                             <Channels />
                         </main>
                     </Route>
-                    <Route path="/404">
+                    <Route path="*">
                         <main className="content">
                             <Error />
                         </main>
                     </Route>
-                    <Redirect to="/404" />
+                    <Redirect to="/films" />
                 </Switch>
             </BrowserRouter>
         </>

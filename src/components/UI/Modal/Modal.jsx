@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext, useState } from 'react';
 import { AuthContext } from "../../../context";
 
 const Modal = ({ visible, setVisible }) => {
@@ -12,7 +12,7 @@ const Modal = ({ visible, setVisible }) => {
 
 
 
-    const { isAuth, setIsAuth } = useContext(AuthContext);
+    const { setIsAuth } = useContext(AuthContext);
     const login = event => {
         event.preventDefault();
         setIsAuth(true);

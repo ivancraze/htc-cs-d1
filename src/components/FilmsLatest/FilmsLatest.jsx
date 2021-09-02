@@ -3,6 +3,7 @@ import FilmsLatestCard from '../FilmsLatestCard/FilmsLatestCard';
 
 const filmsInfo = [
     {
+        id: 1,
         title: 'Мульт в кино. Выпуск №103. Некогда грустить!',
         link: '#',
         alt: 'film-1',
@@ -10,6 +11,7 @@ const filmsInfo = [
         text: 'Фильм повествует о череде событий, произошедших в Голливуде в 1969 году, на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут пытаются найти свое место в стремительно меняющемся мире киноиндустрии.',
     },
     {
+        id: 2,
         title: 'Мульт в кино. Выпуск №103. Некогда грустить!',
         link: '#',
         alt: 'film-2',
@@ -17,6 +19,7 @@ const filmsInfo = [
         text: 'Фильм повествует о череде событий, произошедших в Голливуде в 1969 году, на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут пытаются найти свое место в стремительно меняющемся мире киноиндустрии.',
     },
     {
+        id: 3,
         title: 'Мульт в кино. Выпуск №103. Некогда грустить!',
         link: '#',
         alt: 'film-3',
@@ -24,6 +27,7 @@ const filmsInfo = [
         text: 'Фильм повествует о череде событий, произошедших в Голливуде в 1969 году, на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут пытаются найти свое место в стремительно меняющемся мире киноиндустрии.',
     },
     {
+        id: 4,
         title: 'Мульт в кино. Выпуск №103. Некогда грустить!',
         link: '#',
         alt: 'film-4',
@@ -44,7 +48,7 @@ const FilmsLatest = () => {
                         <div className="films-latest__items">
                             {
                                 filmsInfo.map(film =>
-                                    <FilmsLatestCard title={film.title} link={film.link} alt={film.alt} text={film.text} imgPath={film.imgPath} />
+                                    <FilmsLatestCard key={film.id} title={film.title} link={film.link} alt={film.alt} text={film.text} imgPath={film.imgPath} />
                                 )
                             }
                         </div>
