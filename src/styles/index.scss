@@ -6,6 +6,7 @@
 @import "blocks/footer";
 @import "blocks/error";
 @import "blocks/modal";
+@import "blocks/custom-scroll";
 
 *,
 *::before,
@@ -124,5 +125,3 @@ body {
   -webkit-user-select: none;
   user-select: none;
 }
-
-
