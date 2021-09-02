@@ -1,11 +1,14 @@
 import React from 'react';
+import CustomScroll from 'react-custom-scroll';
 
 const Channels = () => {
     return (
-        <>
-            <section className="channels">
-                <div className="container">
-                    <div className="channels-wrapper ss-container">
+
+        <section className="channels">
+            <div className="container">
+                <CustomScroll>
+                    <div className="channels-wrapper">
+
                         <div className="channels-card">
                             <div className="channels-card__logo">
                                 <img className="channels-card__logo-img" src="/assets/img/channels/first.svg" alt="logo" />
@@ -27,7 +30,6 @@ const Channels = () => {
                                 </div>
                             </div>
                         </div>
-
                         <div className="channels-card">
                             <div className="channels-card__logo">
                                 <img className="channels-card__logo-img" src="/assets/img/channels/2x2.svg" alt="logo" />
@@ -48,7 +50,6 @@ const Channels = () => {
                                 </div>
                             </div>
                         </div>
-
                         <div className="channels-card">
                             <div className="channels-card__logo">
                                 <img className="channels-card__logo-img" src="/assets/img/channels/rbc.svg" alt="logo" />
@@ -70,7 +71,6 @@ const Channels = () => {
                                 </div>
                             </div>
                         </div>
-
                         <div className="channels-card">
                             <div className="channels-card__logo">
                                 <img className="channels-card__logo-img" src="/assets/img/channels/amedia.svg" alt="logo" />
@@ -91,10 +91,32 @@ const Channels = () => {
                                 </div>
                             </div>
                         </div>
+                        <div className="channels-card">
+                            <div className="channels-card__logo">
+                                <img className="channels-card__logo-img" src="/assets/img/channels/amedia.svg" alt="logo" />
+                            </div>
+                            <div className="channels-card__schedule">
+                                <div className="channels-card__schedule-title">AMEDIA PREMIUM</div>
+                                <div className="channels-card__schedule-item channels-card__schedule-item--active">
+                                    <span className="channels-card__schedule-time">13:00</span>
+                                    <span className="channels-card__schedule-name">Клиент всегда мёртв</span>
+                                </div>
+                                <div className="channels-card__schedule-item">
+                                    <span className="channels-card__schedule-time">14:00</span>
+                                    <span className="channels-card__schedule-name">Голодные игры: Сойка-пересмешница. Часть I</span>
+                                </div>
+                                <div className="channels-card__schedule-item">
+                                    <span className="channels-card__schedule-time">15:00</span>
+                                    <span className="channels-card__schedule-name">Секс в большом городе</span>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-                </div>
-            </section>
-        </>
+                </CustomScroll>
+            </div>
+        </section>
+
     );
 };
 

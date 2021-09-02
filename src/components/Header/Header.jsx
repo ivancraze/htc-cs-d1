@@ -8,9 +8,17 @@ import { AuthContext } from "../../context";
 function Header({ ...props }) {
 
     const [modal, setModal] = useState(false);
-    const { isAuth, setIsAuth } = useContext(AuthContext);
-    const username = JSON.parse(localStorage.getItem('login'));
+    const [isEditable, setEditable] = useState(false);
+    const [username, setUsername] = useState('');
 
+    const { isAuth, setIsAuth } = useContext(AuthContext);
+
+    const getUsernameLocalStorage = () => JSON.parse(localStorage.getItem('login'));
+
+    const setUsernameLocalStorage = (login) => {
+        localStorage.setItem('login', JSON.stringify(login));
+        setEditable(false);
+    }
 
     const logout = () => {
         setIsAuth(false);
@@ -18,13 +26,12 @@ function Header({ ...props }) {
         localStorage.removeItem('login');
     }
 
-
     return (
         <>
             <header className="header">
                 <div className="container">
                     <div className="header-wrapper">
-                        <a className="header-logo" href="/films">
+                        <a className="header-logo" href="/">
                             <img className="header-logo__icon" src="/assets/img/icons/logo.svg" alt="Видеосервис" />
                             <h1 className="header-logo__text">{props.title}</h1>
                         </a>
@@ -36,7 +43,16 @@ function Header({ ...props }) {
                             {isAuth
                                 ?
                                 <div className="header-login__user">
-                                    <div className="header-login__user-name">{username}</div>
+                                    {isEditable
+                                        ? <input
+                                            autoFocus
+                                            className="header-login__input"
+                                            onBlur={(e) => setUsernameLocalStorage(e.target.value)}
+                                            defaultValue={getUsernameLocalStorage()}
+                                            onChange={(e) => setUsername(e.target.value)}
+                                        />
+                                        : <div className="header-login__user-name" onClick={() => setEditable(true)}>{getUsernameLocalStorage()}</div>
+                                    }
                                     <Button
                                         className="header-login__user-btn"
                                         onClick={() => logout()}

@@ -1,0 +1,47 @@
+.footer {
+    margin-top: 72px;
+    background: #F2F2F2;
+
+    &-wrapper {
+        display: flex;
+        padding: 25px 0;
+    }
+
+    &-logo {
+        margin-right: 40px;
+    }
+
+    .footer-info {
+        &__address {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 19px;
+            color: #333333;
+        }
+
+        &__link {
+            display: block;
+            margin-top: 10px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            color: #1F4766;
+        }
+
+        &__phone {
+            margin-top: 6px;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 19px;
+            color: #333333;
+
+            &-link {
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 19px;
+                color: #333333;
+            }
+        }
+    }
+}

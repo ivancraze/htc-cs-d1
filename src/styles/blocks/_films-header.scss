@@ -1,0 +1,41 @@
+.films-header {
+    &__wrapper {
+        margin-top: 48px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 33px;
+        text-align: right;
+        color: #333333;
+        text-decoration: none;
+
+        &--active {
+            color: #E5261E;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                background: #E5261E;
+                left: 0;
+                bottom: -9px;
+                width: 100%;
+                height: 2px;
+            }
+        }
+    }
+
+    &__item+.films-header__item {
+        margin-left: 24px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .films-header__item {
+        font-size: 20px;
+    }
+}
