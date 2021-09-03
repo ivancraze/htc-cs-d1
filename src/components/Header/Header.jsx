@@ -24,6 +24,7 @@ function Header({ ...props }) {
         setIsAuth(false);
         localStorage.removeItem('auth');
         localStorage.removeItem('login');
+        localStorage.removeItem('remember');
     }
 
     return (

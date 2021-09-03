@@ -1,5 +1,6 @@
 import React, { useContext, useState, useEffect, useCallback } from 'react';
 import { AuthContext } from "../../../context";
+import styles from './Modal.module.css'
 
 const Modal = ({ visible, setVisible }) => {
     const rootClasses = ['modal']
@@ -8,12 +9,24 @@ const Modal = ({ visible, setVisible }) => {
     }
 
     const [username, setUsername] = useState('');
+
+    const [checked, setChecked] = useState(false)
+    const handleClick = () => {
+        setChecked(!checked)
+    }
+
+
     const { setIsAuth } = useContext(AuthContext);
 
     const login = event => {
         event.preventDefault();
         setIsAuth(true);
         localStorage.setItem('auth', 'true')
+        if (checked) {
+            localStorage.setItem('remember', 'true')
+        } else {
+            localStorage.setItem('remember', 'false')
+        }
         localStorage.setItem('login', JSON.stringify(username))
         setVisible(false);
     }
@@ -39,9 +52,9 @@ const Modal = ({ visible, setVisible }) => {
                 <div className="modal__inputs">
                     <input className="modal__login modal__input" value={username} onChange={(e) => setUsername(e.target.value)} type="text" placeholder="Логин" required />
                     <input className="modal__pass modal__input" type="password" placeholder="Пароль" required />
-                    <label className="modal__member-label" htmlFor="checkbox-member" >
-                        <input className="modal__member-checkbox" type="checkbox" name="Запомнить" id="checkbox-member" />
-                        Запомнить
+                    <label className={styles.custom_checkbox} htmlFor="checkbox-member">
+                        <input type="checkbox" onChange={handleClick} checked={checked} name="Запомнить" id="checkbox-member" />
+                        <span>Запомнить</span>
                     </label>
                 </div>
                 <button className="modal-login__btn" type="submit">Войти</button>
