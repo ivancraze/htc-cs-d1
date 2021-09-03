@@ -13,18 +13,26 @@ function Header({ ...props }) {
 
     const { isAuth, setIsAuth } = useContext(AuthContext);
 
-    const getUsernameLocalStorage = () => JSON.parse(localStorage.getItem('login'));
+    const getUsernameLocalStorage = () => {
+        if (localStorage.getItem('settings') != null) {
+            let settings = JSON.parse(localStorage.getItem('settings'))
+            return settings.login;
+        } else return
+    };
 
     const setUsernameLocalStorage = (login) => {
-        localStorage.setItem('login', JSON.stringify(login));
+        let settings = JSON.parse(localStorage.getItem('settings'))
+        settings.login = login;
+        localStorage.setItem('settings', JSON.stringify(settings));
         setEditable(false);
     }
 
     const logout = () => {
         setIsAuth(false);
         localStorage.removeItem('auth');
-        localStorage.removeItem('login');
+        localStorage.removeItem('settings');
     }
+
 
     return (
         <>
