@@ -21,13 +21,12 @@ const Modal = ({ visible, setVisible }) => {
     const login = event => {
         event.preventDefault();
         setIsAuth(true);
+        let settings = {
+            login: username,
+            remember: checked
+        };
         localStorage.setItem('auth', 'true')
-        if (checked) {
-            localStorage.setItem('remember', 'true')
-        } else {
-            localStorage.setItem('remember', 'false')
-        }
-        localStorage.setItem('login', JSON.stringify(username))
+        localStorage.setItem('settings', JSON.stringify(settings))
         setVisible(false);
     }
 
